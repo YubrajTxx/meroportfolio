@@ -4,37 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Archive</title>
-    <link rel="shortcut icon" href="../icons/logo.png" type="image/x-icon">
+    <meta name="robots" content="index, follow">
+    <title>Projects Archive — Yubraj Tamang Portfolio</title>
     <meta name="description"
         content="A comprehensive showcase of data science, machine learning, and analytical projects completed by Yubraj Tamang.">
     <meta name="keywords"
-        content="Data Science Projects, Machine Learning, Portfolio, Yubraj Tamang, Data Analysis, Prediction Models">
+        content="Data Science Projects, Machine Learning, Portfolio, Yubraj Tamang, Data Engineering, Prediction Models">
+    <meta name="author" content="Yubraj Tamang">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tamangyubraj.com.np/assets/projects/projects.html">
-    <meta property="og:title" content="Projects Archive Yubraj Tamang">
+    <meta property="og:title" content="Projects Archive — Yubraj Tamang Portfolio">
     <meta property="og:description"
         content="Discover the full project history and technical expertise of Yubraj Tamang in data science and beyond.">
     <meta property="og:image" content="https://tamangyubraj.com.np/assets/images/og-projects.jpg">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tamangyubraj.com.np/assets/projects/projects.html">
-    <meta property="twitter:title" content="Projects Archive Yubraj Tamang">
-    <meta property="twitter:description"
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tamangyubraj.com.np/assets/projects/projects.html">
+    <meta name="twitter:title" content="Projects Archive — Yubraj Tamang Portfolio">
+    <meta name="twitter:description"
         content="Discover the full project history and technical expertise of Yubraj Tamang in data science and beyond.">
-    <meta property="twitter:image" content="https://tamangyubraj.com.np/assets/images/og-projects.jpg">
+    <meta name="twitter:image" content="https://tamangyubraj.com.np/assets/images/og-projects.jpg">
 
     <!-- Canonical Link -->
     <link rel="canonical" href="https://tamangyubraj.com.np/assets/projects/projects.html">
 
+    <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Page-specific Styles -->
     <style>
         .archive-container {
             max-width: 800px;
@@ -76,7 +82,6 @@
             letter-spacing: -0.025em;
         }
 
-        /* Adjusting cards for the focused archive view */
         .card-list {
             display: flex;
             flex-direction: column;
@@ -92,20 +97,20 @@
         }
 
         @media (max-width: 768px) {
-            .archive-title {
+            h1.archive-title {
                 font-size: 2rem;
             }
         }
     </style>
 </head>
 
-<body class="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
+<body>
     <!-- Interactive Background Spotlight -->
     <div id="spotlight"></div>
 
     <div class="archive-container">
         <!-- Back to Home Link -->
-        <a href="../../index.html#projects" class="back-link">
+        <a href="../../index.html#projects" class="back-link" aria-label="Back to Yubraj Tamang portfolio">
             <span class="nav-indicator"></span>
             <span>Yubraj Tamang</span>
         </a>
@@ -115,114 +120,33 @@
             <h1 class="archive-title">All Projects</h1>
         </header>
 
-        <!-- Projects Grid -->
+        <!-- Projects List -->
         <ul class="card-list">
-            <!-- Project 1: Interactive Data Dashboard -->
-            <!-- Card 1 -->
-                        <li>
-                            <div class="card project-card">
-                                <img alt="Real Estate Price Prediction"
-                                    src="../images/heamap_corr.png">
-                                <div class="card-body">
-                                    <h3 class="card-title">
-                                        <a href="#" target="_blank" rel="noreferrer noopener"
-                                            aria-label="Real Estate Price Prediction (opens in a new tab)">
-                                            <span>Exploratory Data Analysis (EDA)</span>
-                                        </a>
-                                    </h3>
-                                    <p class="card-description">This project performs exploratory data analysis (EDA) on a car dataset. The goal is to understand the features, clean the data, identify patterns and insights, and prepare it for future machine learning or business intelligence tasks.</p>
-                                    <ul class="tag-list" aria-label="Technologies used">
-                                        <li class="tag">Python</li>
-                                        <li class="tag">Seaborn</li>
-                                        <li class="tag">Pandas</li>
-                                        <li class="tag">NumPy</li>
-                                        <li class="tag">Matplotlib</li>
-                                    </ul>
-                                    <a href="https://github.com/YubrajTxx/car_dataset_explonary-_data_ansysis.git" target="_blank" rel="noreferrer noopener"
-                                        class="btn-details">
-                                        <span class="nav-indicator"></span>
-                                        <span>View in Details</span>
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Card 2 -->
-                        <li>
-                            <div class="card project-card">
-                                <img alt="Sentiment Analysis Tool"
-                                    src="../images/barplot.png">
-                                <div class="card-body">
-                                    <h3 class="card-title">
-                                        <a href="#" target="_blank" rel="noreferrer noopener"
-                                            aria-label="Sentiment Analysis Tool (opens in a new tab)">
-                                            <span>EDA & Cleaning</span>
-                                        </a>
-                                    </h3>
-                                    <p class="card-description">This project involves exploratory data analysis (EDA) and data cleaning on an economic dataset. The aim is to prepare the data for further analysis or machine learning modeling by handling missing values, removing inconsistencies, and uncovering insights through statistical summaries and visualizations.
-
-</p>
-                                    <ul class="tag-list" aria-label="Technologies used">
-                                      <li class="tag">Python</li>
-                                        <li class="tag">Seaborn</li>
-                                        <li class="tag">Pandas</li>
-                                        <li class="tag">NumPy</li>
-                                        <li class="tag">Matplotlib</li>
-                                    </ul>
-                                    <a href="https://github.com/YubrajTxx/economic_Dataset_EDA-_Cleaning" target="_blank" rel="noreferrer noopener"
-                                        class="btn-details">
-                                        <span class="nav-indicator"></span>
-                                        <span>View in Details</span>
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <!-- Card 3 -->
-                        <li>
-                            <div class="card project-card">
-                                <img alt="E-commerce Recommendation System"
-                                    src="../images/PythonProjects11.png">
-                                <div class="card-body">
-                                    <h3 class="card-title">
-                                        <a href="#" target="_blank" rel="noreferrer noopener"
-                                            aria-label="E-commerce Recommendation System (opens in a new tab)">
-                                            <span>Python Mini Projects</span>
-                                        </a>
-                                    </h3>
-                                    <p class="card-description">This is a simple Python program that simulates a menu ordering system for a hotel called KHAJA HOUSE. The program displays a predefined menu with prices, allows the user to place multiple orders, and calculates the total bill while ensuring case-insensitive input handling.</p>
-                                    <ul class="tag-list" aria-label="Technologies used">
-                                        <li class="tag">Python</li>
-                                    </ul>
-                                    <a href="https://github.com/YubrajTxx/python_mini_project" target="_blank" rel="noreferrer noopener"
-                                        class="btn-details">
-                                        <span class="nav-indicator"></span>
-                                        <span>View in Details</span>
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-            <!-- Project 4: Recommendation Engine -->
+            <!-- Project: Exploratory Data Analysis -->
             <li>
                 <div class="card project-card">
-                    <img alt="Recommendation Engine"
-                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=640">
+                    <img alt="Correlation heatmap from car dataset exploratory data analysis"
+                        src="../images/heamap_corr.png"
+                        loading="lazy" width="640" height="360">
                     <div class="card-body">
                         <h3 class="card-title">
-                            <a href="#" target="_blank" rel="noreferrer noopener">
-                                <span>Coming Soon</span>
+                            <a href="https://github.com/YubrajTxx/car_dataset_explonary-_data_ansysis.git"
+                                target="_blank" rel="noreferrer noopener"
+                                aria-label="Exploratory Data Analysis project on GitHub (opens in a new tab)">
+                                <span>Exploratory Data Analysis (EDA)</span>
                             </a>
                         </h3>
-                        <p class="card-description">Personalized recommendation system for a large-scale e-commerce
-                            platform using collaborative filtering and deep learning.</p>
-                        <ul class="tag-list">
-                            <li class="tag">Spark</li>
-                            <li class="tag">TensorFlow</li>
-                            <li class="tag">AWS</li>
+                        <p class="card-description">This project performs exploratory data analysis (EDA) on a car dataset. The goal is to understand the features, clean the data, identify patterns and insights, and prepare it for future machine learning or business intelligence tasks.</p>
+                        <ul class="tag-list" aria-label="Technologies used">
+                            <li class="tag">Python</li>
+                            <li class="tag">Seaborn</li>
+                            <li class="tag">Pandas</li>
+                            <li class="tag">NumPy</li>
+                            <li class="tag">Matplotlib</li>
                         </ul>
-                        <a href="https://github.com/YubrajTxx" target="_blank" rel="noreferrer noopener"
-                            class="btn-details">
+                        <a href="https://github.com/YubrajTxx/car_dataset_explonary-_data_ansysis.git"
+                            target="_blank" rel="noreferrer noopener" class="btn-details"
+                            aria-label="View EDA project details on GitHub (opens in a new tab)">
                             <span class="nav-indicator"></span>
                             <span>View in Details</span>
                             <i class="fa-solid fa-arrow-right"></i>
@@ -230,26 +154,117 @@
                     </div>
                 </div>
             </li>
-            <!-- Project 6: Customer Churn Analysis -->
+
+            <!-- Project: EDA & Cleaning -->
             <li>
                 <div class="card project-card">
-                    <img alt="Customer Churn Analysis"
-                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=640">
+                    <img alt="Bar plot visualization from economic dataset cleaning project"
+                        src="../images/barplot.png"
+                        loading="lazy" width="640" height="360">
                     <div class="card-body">
                         <h3 class="card-title">
-                            <a href="#" target="_blank" rel="noreferrer noopener">
-                                <span>Coming Soon</span>
+                            <a href="https://github.com/YubrajTxx/economic_Dataset_EDA-_Cleaning"
+                                target="_blank" rel="noreferrer noopener"
+                                aria-label="EDA and Cleaning project on GitHub (opens in a new tab)">
+                                <span>EDA & Cleaning</span>
                             </a>
+                        </h3>
+                        <p class="card-description">This project involves exploratory data analysis (EDA) and data cleaning on an economic dataset. The aim is to prepare the data for further analysis or machine learning modeling by handling missing values, removing inconsistencies, and uncovering insights through statistical summaries and visualizations.</p>
+                        <ul class="tag-list" aria-label="Technologies used">
+                            <li class="tag">Python</li>
+                            <li class="tag">Seaborn</li>
+                            <li class="tag">Pandas</li>
+                            <li class="tag">NumPy</li>
+                            <li class="tag">Matplotlib</li>
+                        </ul>
+                        <a href="https://github.com/YubrajTxx/economic_Dataset_EDA-_Cleaning"
+                            target="_blank" rel="noreferrer noopener" class="btn-details"
+                            aria-label="View EDA and Cleaning project details on GitHub (opens in a new tab)">
+                            <span class="nav-indicator"></span>
+                            <span>View in Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Project: Python Mini Projects -->
+            <li>
+                <div class="card project-card">
+                    <img alt="Python mini projects collection thumbnail"
+                        src="../images/PythonProjects11.png"
+                        loading="lazy" width="640" height="360">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <a href="https://github.com/YubrajTxx/python_mini_project"
+                                target="_blank" rel="noreferrer noopener"
+                                aria-label="Python Mini Projects on GitHub (opens in a new tab)">
+                                <span>Python Mini Projects</span>
+                            </a>
+                        </h3>
+                        <p class="card-description">This is a simple Python program that simulates a menu ordering system for a hotel called KHAJA HOUSE. The program displays a predefined menu with prices, allows the user to place multiple orders, and calculates the total bill while ensuring case-insensitive input handling.</p>
+                        <ul class="tag-list" aria-label="Technologies used">
+                            <li class="tag">Python</li>
+                        </ul>
+                        <a href="https://github.com/YubrajTxx/python_mini_project"
+                            target="_blank" rel="noreferrer noopener" class="btn-details"
+                            aria-label="View Python Mini Projects details on GitHub (opens in a new tab)">
+                            <span class="nav-indicator"></span>
+                            <span>View in Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Project: Recommendation Engine (Coming Soon) -->
+            <li>
+                <div class="card project-card">
+                    <img alt="Recommendation engine project preview"
+                        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=640"
+                        loading="lazy" width="640" height="360">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <span>Coming Soon</span>
+                        </h3>
+                        <p class="card-description">Personalized recommendation system for a large-scale e-commerce
+                            platform using collaborative filtering and deep learning.</p>
+                        <ul class="tag-list" aria-label="Technologies used">
+                            <li class="tag">Spark</li>
+                            <li class="tag">TensorFlow</li>
+                            <li class="tag">AWS</li>
+                        </ul>
+                        <a href="https://github.com/YubrajTxx" target="_blank" rel="noreferrer noopener"
+                            class="btn-details"
+                            aria-label="View GitHub profile (opens in a new tab)">
+                            <span class="nav-indicator"></span>
+                            <span>View in Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Project: Customer Churn Analysis (Coming Soon) -->
+            <li>
+                <div class="card project-card">
+                    <img alt="Customer churn analysis project preview"
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=640"
+                        loading="lazy" width="640" height="360">
+                    <div class="card-body">
+                        <h3 class="card-title">
+                            <span>Coming Soon</span>
                         </h3>
                         <p class="card-description">Data analysis project identifying key factors contributing to
                             customer churn in a subscription-based model.</p>
-                        <ul class="tag-list">
+                        <ul class="tag-list" aria-label="Technologies used">
                             <li class="tag">R</li>
                             <li class="tag">Tidyverse</li>
                             <li class="tag">ggplot2</li>
                         </ul>
                         <a href="https://github.com/YubrajTxx" target="_blank" rel="noreferrer noopener"
-                            class="btn-details">
+                            class="btn-details"
+                            aria-label="View GitHub profile (opens in a new tab)">
                             <span class="nav-indicator"></span>
                             <span>View in Details</span>
                             <i class="fa-solid fa-arrow-right"></i>
@@ -260,6 +275,7 @@
         </ul>
     </div>
 
+    <!-- Scripts -->
     <script src="../scripts/script.js"></script>
 </body>
 

@@ -2,9 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const spotlight = document.getElementById('spotlight');
     const navLinks = document.querySelectorAll('.nav a');
     const sections = document.querySelectorAll('section');
-    const contactForm = document.getElementById('contact-form');
 
-    // Smoother Spotlight effect using requestAnimationFrame
+    // ── Spotlight Effect (smooth cursor follow with easing) ──
     let mouseX = 0, mouseY = 0;
     let spotlightX = 0, spotlightY = 0;
 
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateSpotlight() {
         if (window.innerWidth >= 1024) {
-            // Adding easing: spotlight follows mouse with a slight lag for smoothness
             const easing = 0.15;
             spotlightX += (mouseX - spotlightX) * easing;
             spotlightY += (mouseY - spotlightY) * easing;
@@ -28,31 +26,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateSpotlight();
 
-    // Intersection Observer for ScrollSpy and Reveal effects
-    const observerOptions = {
-        root: null,
-        rootMargin: '-20% 0px -20% 0px',
-        threshold: 0.1
-    };
-
+    // ── ScrollSpy & Section Reveal (Intersection Observer) ──
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // ScrollSpy Logic
             if (entry.isIntersecting) {
+                // Update active nav link
                 const id = entry.target.getAttribute('id');
                 navLinks.forEach(link => {
                     link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
                 });
-                
-                // Reveal Logic for Sections
+                // Reveal section
                 entry.target.classList.add('revealed');
             }
         });
-    }, observerOptions);
+    }, {
+        root: null,
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: 0.1
+    });
 
     sections.forEach(section => sectionObserver.observe(section));
 
-    // Reveal Observer for Cards and other elements
+    // ── Card & Element Reveal (one-time animation) ──
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -66,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // Smooth scroll for nav links
+    // ── Smooth Scroll for Nav Links ──
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -81,24 +76,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Contact Form Handling
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const originalBtnContent = submitBtn.innerHTML;
-
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span>Sending...</span> <i class="fa-solid fa-circle-notch fa-spin"></i>';
-
-            setTimeout(() => {
-                alert('Thank you for your message! Your message has been sent successfully.');
-                contactForm.reset();
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnContent;
-            }, 1500);
-        });
-    }
 });
-
